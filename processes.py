@@ -2,8 +2,8 @@ import os
 import wmi
 import getpass
 
-def checkproc(ip_addr):
-	username = input('Username: ')
+# Get all processes.
+def check(ip_addr, username):
 	passwordw = getpass.getpass('Password: ')
 	
 	conn = wmi.WMI(ip_addr, user=username, password=passwordw)

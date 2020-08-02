@@ -53,8 +53,7 @@ if __name__ == "__main__":
     ip = get_valid_ip()
     users = filesystem.getusers(ip)
     username = select_user(users)
-    print("Selected user: {}".format(username))
-    password = getpass.getpass("Password: ")
+    
 
     
     

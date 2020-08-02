@@ -27,4 +27,18 @@ def checkfs(ip_addr):
         print(" - " + file)
 
 def getusers(ip):
-    return [f for f in os.listdir('\\\\' + ip + '\\c$\\users\\')]
+    path = '\\\\' + ip + '\\c$\\users\\'
+    users = [f for f in os.listdir(path) if os.path.isdir(path + "\\" + f)]
+
+    # remove invalid users.
+    invalidUsers = [
+        "All Users",
+        "Default",
+        "Default User",
+    ]
+
+    for user in invalidUsers:
+        if user in users:
+            users.remove(user)
+    
+    return users
