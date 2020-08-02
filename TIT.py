@@ -53,7 +53,8 @@ if __name__ == "__main__":
     ip = get_valid_ip()
     users = filesystem.getusers(ip)
     username = select_user(users)
-    
+    filesystem.checkfs(ip, username)
+    input("press enter to exit.")
 
     
     
