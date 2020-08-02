@@ -25,3 +25,6 @@ def checkfs(ip_addr):
     print("Roaming:\n[+] Discovered:")
     for file in files_roaming:
         print(" - " + file)
+
+def getusers(ip):
+    return [f for f in os.listdir('\\\\' + ip + '\\c$\\users\\')]
