@@ -1,2 +1,2 @@
-# ThreatInvestigatorTool-TIT
+# ThreatInvestigationTool-TIT
 A tool to investigate threats
